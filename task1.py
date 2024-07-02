@@ -63,7 +63,7 @@ while(n==1):
     else:
         while(re != "y" and re != "Y" and re != "n" and re != "N"):
             print("You have entered the wrong value!")
-            print("Only enter (y or n)")
+            re = input("Only enter (y or n)")
             if(re == 'y' or re == "Y"):
                 n = 1
             elif(re == 'n' or re == "N"):
