@@ -11,7 +11,10 @@ def subt(a,b):
 def multi(a,b):
     return a*b
 def div(a,b):
-    return a/b
+    if b == 0:
+        return "Error! Cannot divide by 0!"
+    else:
+        return a/b
 n = 1
 while(n==1):
     print("***********************")
@@ -20,7 +23,7 @@ while(n==1):
     a = int(input("Enter the first operand: "))
     b = int(input("Enter the second operand: "))
     op = input("Enter the operator: ")
-    if(op=="+" or op=="-" or op=="*" or op=="*"):
+    if(op=="+" or op=="-" or op=="*" or op=="/"):
         if op == "+":
             r = add(a,b)
             print(r)
@@ -30,12 +33,9 @@ while(n==1):
         elif op == "*":
             r = multi(a,b)
             print(r)
-        else :
+        elif op == "/":
             r = div(a,b)
-            if(b == 0):
-                print("Error! Cannot divide by 0!")
-            else:
-                print(r)
+            print(r)
     else:
         while(op != "+" and op!= "-" and op!= "*" and op!= "/") :
             print("You have entered the wrong operator 😑")
@@ -49,7 +49,7 @@ while(n==1):
             elif op == "*":
                 r = multi(a,b)
                 print(r)
-            else :
+            elif op == "/":
                 r = div(a,b)
                 print(r)
 
